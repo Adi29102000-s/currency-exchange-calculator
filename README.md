@@ -1,5 +1,9 @@
 # Currency Converter
 
+**Live demo:** https://adi29102000-s.github.io/currency-exchange-calculator/
+
+> Learning project: my first web tool using a live data API, built with GitHub Copilot.
+
 A responsive currency exchange calculator built with plain HTML, CSS, and JavaScript. It fetches live rates when online and uses built-in fallback rates if the rate service is unavailable.
 
 ## Run locally
