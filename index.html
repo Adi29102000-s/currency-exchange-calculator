@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
-    <meta
-      name="description"
-      content="A modern currency exchange calculator with live conversion rates and offline fallback support."
-    />
+    <meta name="description" content="A modern currency exchange calculator with live conversion rates and offline fallback support." />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,60 +15,42 @@
             <p class="eyebrow">Finance tool</p>
             <h1>Currency Converter</h1>
           </div>
-          <div class="status-pill" id="status-pill">Loading rates…</div>
+          <div class="status-pill" id="status-pill" aria-live="polite">Loading rates…</div>
         </div>
 
-        <div class="converter-form" id="converter-form">
+        <form class="converter-form" id="converter-form">
           <div class="field-group">
             <label for="amount">Amount</label>
-            <input id="amount" type="number" min="0" step="0.01" value="100" />
+            <input id="amount" name="amount" type="number" min="0" step="0.01" value="100" />
           </div>
 
           <div class="currency-row">
             <div class="field-group">
               <label for="from-currency">From</label>
-              <select id="from-currency"></select>
+              <select id="from-currency" name="from-currency"></select>
             </div>
-
             <button id="swap-button" type="button" aria-label="Swap currencies">⇄</button>
-
             <div class="field-group">
               <label for="to-currency">To</label>
-              <select id="to-currency"></select>
+              <select id="to-currency" name="to-currency"></select>
             </div>
           </div>
-
           <button class="convert-button" type="submit">Convert</button>
-        </div>
+        </form>
 
-        <div class="result-card">
+        <div class="result-card" aria-live="polite">
           <p class="result-label">Converted Amount</p>
-          <div class="result-main">
-            <span id="result">0.00</span>
-            <span id="result-code" class="result-code">USD</span>
-          </div>
+          <div class="result-main"><span id="result">0.00</span><span id="result-code" class="result-code">INR</span></div>
           <p id="rate-summary" class="rate-summary">1 USD = 83.33 INR</p>
         </div>
       </section>
 
       <aside class="info-panel">
-        <div class="mini-card">
-          <p class="mini-label">Base Currency</p>
-          <h2>USD</h2>
-        </div>
-
-        <div class="mini-card">
-          <p class="mini-label">Updated</p>
-          <h2 id="last-updated">--</h2>
-        </div>
-
-        <div class="mini-card rates-card">
-          <p class="mini-label">Popular rates</p>
-          <ul id="popular-rates"></ul>
-        </div>
+        <div class="mini-card"><p class="mini-label">Base Currency</p><h2>USD</h2></div>
+        <div class="mini-card"><p class="mini-label">Rates updated</p><h2 id="last-updated">--</h2></div>
+        <div class="mini-card rates-card"><p class="mini-label">Popular rates</p><ul id="popular-rates"></ul></div>
       </aside>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>
