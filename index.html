@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Exchange Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <h1>Currency Exchange Calculator</h1>
+        <form id="converter-form">
+          <div class="field-group">
+            <label for="amount">Amount</label>
+            <input id="amount" type="number" min="0" step="0.01" value="100" />
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="from-currency">From</label>
+              <select id="from-currency"></select>
+            </div>
+
+            <button type="button" id="swap-button" aria-label="Swap currencies">⇄</button>
+
+            <div class="field-group">
+              <label for="to-currency">To</label>
+              <select id="to-currency"></select>
+            </div>
+          </div>
+
+          <button type="submit" class="convert-button">Convert</button>
+        </form>
+
+        <div class="result-box">
+          <p class="result-label">Converted Amount</p>
+          <p id="result">0.00</p>
+        </div>
+
+        <p id="status" class="status">Loading exchange rates...</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
