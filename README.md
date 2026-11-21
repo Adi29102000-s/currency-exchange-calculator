@@ -1,6 +1,6 @@
 # Currency Converter
 
-**Live demo:** https://adi29102000-s.github.io/currency-exchange-calculator/
+**Live demo:** https://aditisonawane29.github.io/currency-exchange-calculator/
 
 > Learning project: my first web tool using a live data API, built with GitHub Copilot.
 
